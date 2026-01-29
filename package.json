@@ -1,0 +1,22 @@
+{
+  "name": "yams_examen_saminada",
+  "version": "1.0.0",
+  "main": "YAMS.test.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aery248/YAMS_EXAMEN_SAMINADA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aery248/YAMS_EXAMEN_SAMINADA/issues"
+  },
+  "homepage": "https://github.com/Aery248/YAMS_EXAMEN_SAMINADA#readme",
+  "description": "",
+  "dependencies": {
+    "vitest": "^3.2.4"
+  }
+}
