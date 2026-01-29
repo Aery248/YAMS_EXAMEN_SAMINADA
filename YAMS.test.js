@@ -24,4 +24,10 @@ describe('Jeux de YAMS', () => {
   const game = new YAMS();
   expect(game.score([[2, 3, 4, 5, 6]])).toBe(40);
 });
+
+it("doit retourner 30 pour un Full ", () => {
+  const game = new YAMS();
+  expect(game.score([[2, 2, 3, 3, 3]])).toBe(30);
+
+});
 });
