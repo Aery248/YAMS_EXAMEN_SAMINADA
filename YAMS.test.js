@@ -11,4 +11,9 @@ describe('YAMS Game', () => {
     const game = new YAMS();
     expect(game.score([[1, 1, 1, 1, 1]])).toBe(50);
   });
+
+  it("should return the sum of dice when it's a Luck roll", () => {
+    const game = new YAMS();
+    expect(game.score([[1, 2, 3, 4, 6]])).toBe(16);
+  })
 });

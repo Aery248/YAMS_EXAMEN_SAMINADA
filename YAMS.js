@@ -4,7 +4,8 @@ export class YAMS {
     const allSame = roll.every(die => die === roll[0])
 
     if (allSame) return 50
-    return 0
+
+    return roll.reduce((a, b) => a + b, 0)
   }
 }
 
