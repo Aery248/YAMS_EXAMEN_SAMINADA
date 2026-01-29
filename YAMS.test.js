@@ -14,6 +14,10 @@ describe('Jeux de YAMS', () => {
 
   it("doit retourner la somme des dés lorsqu'il s'agit d'un lancer de chance", () => {
     const game = new YAMS();
+    expect(game.score([[1, 2, 3, 4, 6]])).toBe(16);
+  })
+  it("doit retourner 40 pour un lancer de la valeur des 5 dés qui se suivent", () => {
+    const game = new YAMS();
     expect(game.score([[1, 2, 3, 4, 5]])).toBe(15);
   })
 });
