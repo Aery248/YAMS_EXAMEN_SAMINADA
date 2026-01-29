@@ -5,15 +5,15 @@ export class YAMS {
 
     if (allSame) return 50
     
-    const sorted = [...roll].sort((a, b) => a - b);
-    const isStraight15 =
-      sorted[0] === 1 &&
-      sorted[1] === 2 &&
-      sorted[2] === 3 &&
-      sorted[3] === 4 &&
-      sorted[4] === 5;
+    const sorted = [...new Set(roll)].sort((a, b) => a - b);
+    const isLargeStraight =
+      sorted.length === 5 &&
+      sorted.every((value, index) =>
+        index === 0 || value === sorted[index - 1] + 1
+      );
 
-    if (isStraight15) return 40;
+    if (isLargeStraight) return 40;
+    
     return roll.reduce((a, b) => a + b, 0)
   }
 }
