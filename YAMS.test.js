@@ -12,10 +12,7 @@ describe('Jeux de YAMS', () => {
     expect(game.score([[1, 1, 1, 1, 1]])).toBe(50);
   });
 
-  it("doit retourner la somme des dés lorsqu'il s'agit d'un lancer de chance", () => {
-    const game = new YAMS();
-    expect(game.score([[1, 2, 3, 4, 6]])).toBe(16);
-  })
+  
   it("doit retourner 40 pour une grande suite 1-5", () => {
     const game = new YAMS();
     expect(game.score([[1, 2, 3, 4, 5]])).toBe(40);
@@ -29,5 +26,17 @@ it("doit retourner 30 pour un Full ", () => {
   const game = new YAMS();
   expect(game.score([[2, 2, 3, 3, 3]])).toBe(30);
 
+});
+it("doit retourner la somme des dés lorsqu'il s'agit d'un lancer de chance", () => {
+    const game = new YAMS();
+    expect(game.score([[1, 2, 3, 4, 6]])).toBe(16);
+  })
+
+it("doit retourner la somme des points pour plusieurs lancers", () => {
+  const game = new YAMS();
+  expect(game.score([
+    [1, 1, 1, 1, 1], // 50
+    [1, 2, 3, 4, 6]  // 16
+  ])).toBe(66);
 });
 });

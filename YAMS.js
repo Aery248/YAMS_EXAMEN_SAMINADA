@@ -13,7 +13,7 @@ export class YAMS {
       );
 
     if (isLargeStraight) return 40;
-    
+
     return roll.reduce((a, b) => a + b, 0)
   }
 }
